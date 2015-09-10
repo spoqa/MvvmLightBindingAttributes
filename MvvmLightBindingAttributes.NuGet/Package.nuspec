@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<package>
+  <metadata>
+    <id>MvvmLightBindingAttributes</id>
+    <version>0.0.1</version>
+    <title>MvvmLightBindingAttributes</title>
+    <authors>Spoqa</authors>
+    <owners>Spoqa</owners>
+    <description>
+      MvvmLightBindingAttributes provides attributes for Mvvm Light.
+      The attributes are based on LocationInterceptionAspect of PostSharp, simplify binding properties between View and ViewModel.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/spoqa/MvvmLightBindingAttributes</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>Copyright 2015</copyright>
+    <dependencies>
+      <group targetFramework="net40">
+        <dependency id="MvvmLightLibs" version="5.2.0" />
+        <dependency id="PostSharp" version="4.1.23" />
+      </group>
+    </dependencies>
+    <references>
+      <reference file="MvvmLightBindingAttributes.dll" />
+    </references>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="PresentationCore" targetFramework="net40" />
+      <frameworkAssembly assemblyName="PresentationFramework" targetFramework="net40" />
+    </frameworkAssemblies>
+    <tags>mvvm mvvmlight postsharp</tags>
+  </metadata>
+  <files>
+    <file src="lib\**\MvvmLightBindingAttributes.dll" target="lib" />
+    <file src="tools\" target="tools" />
+  </files>
+</package>

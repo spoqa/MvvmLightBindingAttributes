@@ -1,0 +1,52 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Windows;
+using GalaSoft.MvvmLight;
+using PostSharp.Aspects;
+
+namespace MvvmLightBindingAttributes
+{
+	public class ViewModelBaseWrapper : ViewModelBase
+	{
+		public new void RaisePropertyChanged(string propertyName) => base.RaisePropertyChanged(propertyName);
+	}
+
+<# var types = new [] {
+		"Boolean",
+		"Char",
+		"Decimal",
+		"Double",
+		"Single",
+		"Int32",
+		"UInt32",
+		"Int64",
+		"UInt64",
+		"Int16",
+		"UInt16",
+		"String",
+		"DateTime",
+		"GridLength",
+		"Visibility",
+	};
+
+foreach (var t in types)
+{
+#>
+	[Serializable]
+	public class <#=t#>BindingAttribute : LocationInterceptionAspect
+	{
+		public override void OnSetValue(LocationInterceptionArgs args)
+		{
+			var existing = (<#=t#>)args.GetCurrentValue();
+			if (existing == (<#=t#>)args.Value)
+				return;
+
+			base.OnSetValue(args);
+			((ViewModelBaseWrapper)args.Instance).RaisePropertyChanged(args.LocationName);
+		}
+	}
+<#
+}
+#>
+}
