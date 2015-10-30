@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>MvvmLightBindingAttributes</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <title>MvvmLightBindingAttributes</title>
     <authors>Spoqa</authors>
     <owners>Spoqa</owners>
@@ -24,7 +24,7 @@
     <dependencies>
       <group targetFramework="net40">
         <dependency id="MvvmLightLibs" version="5.2.0" />
-        <dependency id="PostSharp" version="4.1.23" />
+        <dependency id="PostSharp" version="4.1.28" />
       </group>
     </dependencies>
     <references>
@@ -33,6 +33,7 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="PresentationCore" targetFramework="net40" />
       <frameworkAssembly assemblyName="PresentationFramework" targetFramework="net40" />
+      <frameworkAssembly assemblyName="WindowsBase" targetFramework="net40" />
     </frameworkAssemblies>
     <tags>mvvm mvvmlight postsharp</tags>
   </metadata>

@@ -28,6 +28,8 @@ namespace MvvmLightBindingAttributes
 		"DateTime",
 		"GridLength",
 		"Visibility",
+		"FontWeight",
+		"TextDecorationCollection"
 	};
 
 foreach (var t in types)
