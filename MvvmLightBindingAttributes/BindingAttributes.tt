@@ -29,7 +29,9 @@ namespace MvvmLightBindingAttributes
 		"GridLength",
 		"Visibility",
 		"FontWeight",
-		"TextDecorationCollection"
+		"TextDecorationCollection",
+		"Thickness",
+		"CornerRadius"
 	};
 
 foreach (var t in types)
