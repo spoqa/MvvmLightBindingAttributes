@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>MvvmLightBindingAttributes</id>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <title>MvvmLightBindingAttributes</title>
     <authors>Spoqa</authors>
     <owners>Spoqa</owners>
@@ -24,7 +24,7 @@
     <dependencies>
       <group targetFramework="net40">
         <dependency id="MvvmLightLibs" version="5.2.0" />
-        <dependency id="PostSharp" version="4.1.28" />
+        <dependency id="PostSharp" version="4.2.14" />
       </group>
     </dependencies>
     <references>
