@@ -38,6 +38,7 @@ foreach (var t in types)
 {
 #>
 	[Serializable]
+	[LinesOfCodeAvoided(5)]
 	public class <#=t#>BindingAttribute : LocationInterceptionAspect
 	{
 		public override void OnSetValue(LocationInterceptionArgs args)
